@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Essai1.Views.HelpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Voici la page d'aide!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <FlyoutItem
+               Icon="reply_FILL0_wght400_GRAD0.opsz48.png">
+                <ShellContent 
+              Route="AppShellPage"
+              ContentTemplate="{DataTemplate local:AppShellPage}" />
+            </FlyoutItem>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Essai1.Views.Evenements_urgents">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Vos evenements les plus urgents s'affichent ici"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Vous n'avez aucun evenement enregistre"/>
+
+           <FlyoutItem
+                Icon="reply_FILL0_wght400_GRAD0.opsz48.png">
+                 <ShellContent 
+               Route="MainPage"
+               ContentTemplate="{DataTemplate local:MainPage}" />
+           </FlyoutItem>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

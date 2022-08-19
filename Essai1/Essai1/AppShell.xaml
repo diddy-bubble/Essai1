@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Tasks"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Essai1.AppShell">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Frame>
+               <FlyoutItem
+                    Title="Bonjour XXX"    
+                    Icon="account_circle_FILL0_wght400_GRAD0.opsz48.png">
+                  <ShellContent 
+                       Route="TachePage"
+                       ContentTemplate="{DataTemplate local:TachePage}" />
+               </FlyoutItem>
+           </Frame>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+
+    <FlyoutItem 
+            Title="Creer une nouvelle tache"
+            Icon="add_circle_FILL0_wght400_GRAD0.opsz48.png">
+        <ShellContent 
+            Route="TachePage"
+            ContentTemplate="{DataTemplate local:TachePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+                Title="Favoris"
+                Icon="favorite_FILL0_wght400_GRAD0.opsz48.png">
+        <ShellContent
+                Route="FavoritePage"
+                ContentTemplate="{DataTemplate local:FavoritePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+                Title="Aide"
+                Icon="help_FILL0_wght400_GRAD0.opsz48.png">
+        <ShellContent
+                Route="HelpPage"
+                ContentTemplate="{DataTemplate local:HelpPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem    
+                Title="Corbeille"
+                Icon="delete_FILL0_wght400_GRAD0.opsz48.png">
+        <ShellContent
+             Route="DeletePage"
+             ContentTemplate="{DataTemplate local:DeletePage}" />
+    </FlyoutItem>
+</Shell>
