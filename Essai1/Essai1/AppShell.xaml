@@ -2,31 +2,27 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              Title="Tasks"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Essai1.Views"
+             xmlns:root="clr-namespace:Essai1"
+             Shell.ForegroundColor="White"
              x:Class="Essai1.AppShell">
 
-    <Shell.Resources>
-        <ResourceDictionary>
-            <Frame>
-               <FlyoutItem
-                    Title="Bonjour XXX"    
-                    Icon="account_circle_FILL0_wght400_GRAD0.opsz48.png">
-                  <ShellContent 
-                       Route="TachePage"
-                       ContentTemplate="{DataTemplate local:TachePage}" />
-               </FlyoutItem>
-           </Frame>
-        </ResourceDictionary>
-    </Shell.Resources>
-
-
-
-    <FlyoutItem 
-            Title="Creer une nouvelle tache"
-            Icon="add_circle_FILL0_wght400_GRAD0.opsz48.png">
-        <ShellContent 
-            Route="TachePage"
-            ContentTemplate="{DataTemplate local:TachePage}" />
+    <FlyoutItem
+                Title="Bonjour XXX"
+                Icon="add_circle_FILL0_wght400_GRAD0.opsz48.png">
+        <ShellContent
+                Route="MainPage"
+                ContentTemplate="{DataTemplate root:MainPage}" />
     </FlyoutItem>
+        
+    <FlyoutItem
+                Title="Créer une nouvelle tache"
+                Icon="add_circle_FILL0_wght400_GRAD0.opsz48.png">
+        <ShellContent
+                Route="TachePage"
+                ContentTemplate="{DataTemplate local:TachePage}" />
+    </FlyoutItem>
+
 
     <FlyoutItem
                 Title="Favoris"

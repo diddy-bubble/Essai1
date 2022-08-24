@@ -1,31 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Tasks"
              x:Class="Essai1.MainPage">
 
     <StackLayout>
-        <Frame 
-            BackgroundColor="#F06385" 
-            Padding="24" 
-            CornerRadius="0">
-        </Frame>
+        <Label Text="Listes"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill"
+               Margin="50"
+               Padding="1"/>
         
-        <FlyoutItem 
-            Title="Listes"
-            Icon="list_FILL0_wght400_GRAD0.opsz48.png">
-               <ShellContent 
-            Route="ListePage"
-            ContentTemplate="{DataTemplate local:ListePage}" />
-        </FlyoutItem>
-
-        <FlyoutItem 
-            Title="Evenements urgents"
-            Icon="notification_important_FILL0_wght400_GRAD0.opsz48.png">
-                <ShellContent 
-            Route="Evenements_urgents"
-            ContentTemplate="{DataTemplate local:Evenements_urgents}" />
-        </FlyoutItem>
-      
+        <Label Text="Evènements urgents"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill"
+               Margin="50"
+               Padding="1"/>
     </StackLayout>
 
 </ContentPage>

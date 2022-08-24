@@ -1,72 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Tasks"
              x:Class="Essai1.Views.TachePage">
     <ContentPage.Content>
         <StackLayout>
-            
-            <FlyoutItem 
-                Title="Commentaires"
-                Icon="sort_FILL0_wght400_GRAD0.opsz48.png">
-               <ShellContent 
-                 Route="TachePage"
-                 ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
-            
-            <FlyoutItem
-                Title="Sous-taches"
-                Icon="format_list_bulleted_FILL0_wght400_GRAD0.opsz48.png">
-                   <ShellContent 
-               Route="TachePage"
-               ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
-            
-            <FlyoutItem
-               Title="Listes"
-               Icon="list_FILL0_wght400_GRAD0.opsz48.png">
-                  <ShellContent 
-              Route="TachePage"
-              ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
-            
-            <FlyoutItem
-                Title="Date d'echeance"
-                Icon="alarm_FILL0_wght400_GRAD0.opsz48.png">
-                   <ShellContent 
-               Route="TachePage"
-               ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
+            <Label Text="Description"/>
+            <Label Text="Date de début"/>
+            <Label Text="Date de fin"/>
+            <Label Text="Rappel"/>
+            <Label Text="Priorité"/>
 
-            <FlyoutItem
-               Title="Rappel"
-               Icon="notification_off_FILL0_wght400_GRAD0.opsz48.png">
-                  <ShellContent 
-                Route="TachePage"
-                ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
-
-            <FlyoutItem
-               Title="Priorite"
-                Icon="flag_FILL0_wght400_GRAD0.opsz48.png">
-                <ShellContent 
-              Route="TachePage"
-              ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
-
-            <FlyoutItem
-               Title="Mettre en favori"
-               Icon="favorite_FILL0_wght400_GRAD0.opsz48.png">
-                 <ShellContent 
-              Route="TachePage"
-              ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
-
-            <FlyoutItem
-               Icon="reply_FILL0_wght400_GRAD0.opsz48.png">
-                   <ShellContent 
-              Route="TachePage"
-              ContentTemplate="{DataTemplate local:TachePage}" />
-            </FlyoutItem>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

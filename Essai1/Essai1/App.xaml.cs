@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace Essai1
 {
@@ -10,10 +8,7 @@ namespace Essai1
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
-            {
-                BarBackgroundColor = Color.Blue;
-            };
+            MainPage = new AppShell();
         }
 
         protected override void OnStart()

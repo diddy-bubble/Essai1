@@ -1,24 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Tasks"
              x:Class="Essai1.Views.DeletePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="C'est ici que les listes que vous avez supprime sont conservees"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label 
+                Text="C'est ici que les listes que vous avez supprimé sont conservées"
+                VerticalOptions="Fill" 
+                HorizontalOptions="EndAndExpand" 
+                Padding="25"/>
 
-            <Label Text="Elles se suppriment definitivement au bout d'un mois"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center" />
-
-            <FlyoutItem
-               Icon="reply_FILL0_wght400_GRAD0.opsz48.png">
-                <ShellContent 
-              Route="AppShellPage"
-              ContentTemplate="{DataTemplate local:AppShellPage}" />
-            </FlyoutItem>
-            
+            <Label 
+                Text="Elles se suppriment définitivement au bout d'un mois"
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill" 
+                Padding="25"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,22 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Tasks"
              x:Class="Essai1.Views.ListePage">
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="C'est ici que toutes les listes que vous savez creee s'affichent"
+            <Label 
+                Text="Listes"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"/>
+            
+            <Label
+                Text="Vous n'avez encore créé aucune liste"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Label Text="Vous n'avez encore créé aucune liste"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center" />
 
-            <FlyoutItem
-               Icon="reply_FILL0_wght400_GRAD0.opsz48.png">
-                 <ShellContent 
-              Route="MainPage"
-              ContentTemplate="{DataTemplate local:MainPage}" />
-            </FlyoutItem>
+            
+            <CheckBox/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
