@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Tasks"
              x:Class="Essai1.Views.TachePage">
+     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Description"/>
-            <Label Text="Date de début"/>
+            <Entry x:Name="Nom" 
+                   Text="Nom de la tache"/>
+            <Entry x:Name="Description"
+                   Text="Description" />
             <Label Text="Date de fin"/>
             <Label Text="Rappel"/>
             <Label Text="Priorité"/>

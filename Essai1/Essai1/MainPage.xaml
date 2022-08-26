@@ -1,21 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Essai1"
              Title="Tasks"
-             x:Class="Essai1.MainPage">
+             x:Class="Essai1.MainPage"
+             x:DataType="vm:MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource="search.png"
+            ClassId="search"
+            Order="Primary"
+            Priority="0"
+            Clicked="PrimaryClicked"/>
+
+        <ToolbarItem
+            IconImageSource="share.png"
+            ClassId="share"
+            Order="Primary"
+            Clicked="PrimaryClicked"
+            Priority="0" />
+
+        <ToolbarItem
+            Order="Secondary"
+            ClassId="modifier"
+            Text="Modifier"
+            Clicked="SecondaryClicked"/>
+        <ToolbarItem
+            ClassId="trier"
+            Order="Secondary"
+            Text="Trier"/>
+        <ToolbarItem
+            Order="Secondary"
+            ClassId="deplacer"
+            Text="Deplacer"/>
+    </ContentPage.ToolbarItems>
 
     <StackLayout>
+        <SearchBar IsVisible="{Binding IsSearchVisible}"/>
         <Label Text="Listes"
                HorizontalOptions="Fill"
                VerticalOptions="Fill"
                Margin="50"
-               Padding="1"/>
-        
-        <Label Text="Evènements urgents"
-               HorizontalOptions="Fill"
-               VerticalOptions="Fill"
+               Padding="1" />
+
+        <Label 
+               Text="Evènements urgents"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
                Margin="50"
                Padding="1"/>
     </StackLayout>
-
 </ContentPage>
+
+    
