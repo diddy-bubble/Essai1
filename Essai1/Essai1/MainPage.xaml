@@ -33,7 +33,7 @@
         <ToolbarItem
             Order="Secondary"
             ClassId="deplacer"
-            Text="Deplacer"/>
+            Text="Déplacer"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
@@ -51,6 +51,7 @@
                Margin="50"
                Padding="1"/>
     </StackLayout>
+    
 </ContentPage>
 
     

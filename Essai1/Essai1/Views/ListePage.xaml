@@ -1,23 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Essai1.Views"
+             xmlns:model="clr-namespace:Essai1.Models"
              Title="Tasks"
-             x:Class="Essai1.Views.ListePage">
+             x:Class="Essai1.Views.ListePage"
+             x:DataType="local:ListePage">
 
-    <ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource="search.png"
+            ClassId="search"
+            Order="Primary"
+            Priority="0"
+            Clicked="PrimaryClicked"/>
+
+        <ToolbarItem
+            IconImageSource="share.png"
+            ClassId="share"
+            Order="Primary"
+            Clicked="PrimaryClicked"
+            Priority="0" />
+
+        <ToolbarItem
+            Order="Secondary"
+            ClassId="modifier"
+            Text="Modifier"
+            Clicked="SecondaryClicked"/>
+
+        <ToolbarItem
+            ClassId="trier"
+            Order="Secondary"
+            Text="Trier"/>
+
+        <ToolbarItem
+            Order="Secondary"
+            ClassId="deplacer"
+            Text="Déplacer"/>
+        </ContentPage.ToolbarItems>
+
+        <ContentPage.Content>
         <StackLayout>
-            <Label 
-                Text="Listes"
-                VerticalOptions="Center"
-                HorizontalOptions="CenterAndExpand"/>
-            
-            <Label
-                Text="Vous n'avez encore créé aucune liste"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-
-            
-            <CheckBox/>
+            <SearchBar IsVisible="{Binding IsSearchVisible}"/>
+            <ListView
+                ItemsSource="{Binding Taches}">
+                <ListView.ItemTemplate>
+                    <DataTemplate
+                        x:DataType="model:Tache">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"
+                                         >
+                                <StackLayout>
+                                    <Label Text="{Binding Titre}"/>
+                                    <Label Text="{Binding Date}"/>
+                                </StackLayout>
+                                <Label
+                                    Text="{Binding PrioriteString}"/>
+                                <CheckBox
+                                    IsChecked="{Binding IsCompleted}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             
         </StackLayout>
     </ContentPage.Content>

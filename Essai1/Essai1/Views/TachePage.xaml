@@ -1,19 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Essai1.ViewModels"
              Title="Tasks"
-             x:Class="Essai1.Views.TachePage">
-     
+             x:Class="Essai1.Views.TachePage"
+             x:DataType="vm:TachePageViewModel">
+
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="Nom" 
-                   Text="Nom de la tache"/>
-            <Entry x:Name="Description"
-                   Text="Description" />
-            <Label Text="Date de fin"/>
-            <Label Text="Rappel"/>
-            <Label Text="Priorité"/>
-
+            <Entry
+                Placeholder="Nom de la tache"
+                Text="{Binding Titre}"/>
+            <Entry
+                Placeholder="Description" 
+                Text="{Binding Description}"/>
+            <Label
+                Text="Date de début"/>
+            <DatePicker Date="{Binding DateDeDebut}"/>
+            <Label
+                Text="Date de fin"/>
+            <DatePicker Date="{Binding DateDeFin}"/>
+            <Label
+                Text="Priorite"/>
+            <Picker
+                Title="Priorite">
+                <Picker.ItemsSource>
+                    <x:Array>
+                        <x:String>FAIBLE</x:String>
+                        <x:String>MOYENNE</x:String>
+                        <x:String>ELEVEE</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="Rappel"/>
+                <Switch IsToggled="{Binding IsEmergency}"/>
+            </StackLayout>
+            <Button
+                Text="Creer"
+                Command="{Binding CreateCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
